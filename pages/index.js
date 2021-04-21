@@ -12,7 +12,7 @@ export async function getStaticProps() {
     return {
         props: {
             recipes: res.items,
-            revalidate: 1
+            revalidate: 1,
         },
     };
 }
@@ -25,7 +25,7 @@ export default function Recipes({ recipes }) {
                 <RecipeCard key={recipe.sys.id} recipe={recipe} />
             ))}
 
-            <style jsx>{ `
+            <style jsx>{`
                 .recipe-list {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
